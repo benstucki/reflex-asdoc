@@ -1,6 +1,0 @@
-<flex-config>
-   <compiler>
-		<coverage>I work!</coverage>
-		<!--<coverage-metadata>reflex-coverage.cvm</coverage-metadata>-->
-   </compiler>
-</flex-config>

@@ -23,6 +23,12 @@
 	background-image: url(images/titleTableTop.jpg);
 	background-repeat: repeat-x;
 }
+
+.titleTableSpacer {
+	background-image: url(images/titleTableTop.jpg);
+	background-repeat: repeat-x;
+}
+
 .titleTableSearch {
 	white-space: nowrap;
 	background-image: url(images/titleTableTop.jpg);

@@ -682,8 +682,9 @@
 						</xsl:choose>
 					</td>
 <!-- modified by Ben Stucki -->
+<xsl:if test="$config/linkReport/show = 'true'">
 					<xsl:variable name="apiName" select="./apiName" />
-					<xsl:variable name="linkReportNode" select="document('/Users/mac/Reflex/Reflex/docs/link-report.xml')//scripts/script[def/@id=concat($packageName,':',$apiName)]" />
+					<xsl:variable name="linkReportNode" select="document($config/linkReport/path)//scripts/script[def/@id=concat($packageName,':',$apiName)]" />
 					
 					<xsl:variable name="nodes">
 						<xsl:apply-templates select="$linkReportNode">
@@ -697,8 +698,8 @@
 							<tr height="100%">
 								<td class="costArea">
 									<span class="costSize">
-										<!--<xsl:value-of select="round((sum($nodes/script/@optimizedsize) div 1000) * 10) div 10" />-->
-										<xsl:value-of select="sum($nodes/script/@optimizedsize)" />
+										<xsl:value-of select="round((sum($nodes/script/@optimizedsize) div 1000) * 10) div 10" />
+										<!--<xsl:value-of select="sum($nodes/script/@optimizedsize)" />-->
 									</span>
 									<span class="costMeasure"></span>
 								</td>
@@ -706,6 +707,7 @@
 							<tr height="20"><td class="costLabel">Kilobytes</td></tr>
 						</table>
 					</td>
+</xsl:if>
 <!-- end modification -->
 				</tr>
 				<tr>
@@ -1190,21 +1192,22 @@
 		<hr/>
 		
 <!-- modified by Ben Stucki -->
+<xsl:if test="$config/tests/show='true'">
 		<div class="testDiv">
 			<xsl:variable name="apiName" select="./apiName" />
-			<xsl:variable name="testFileURI" select="concat('/Users/mac/Reflex/ReflexTests/reports/Test-',$packageName,'.',$apiName,'Test.xml')" />
+			<xsl:variable name="testFileURI" select="concat($config/tests/path,'/',$config/tests/prefix,$packageName,'.',$apiName,'Test.xml')" />
 			<xsl:variable name="testNode" select="document($testFileURI)" />
-			<xsl:variable name="coverageNode" select="document('/Users/mac/Reflex/ReflexTests/reports/ReflexTests.cvr')//package/class[@name=$apiName]" />
+			<xsl:variable name="coverageNode" select="document($config/tests/coverage)//package/class[@name=$apiName]" />
 			<xsl:variable name="testsFailed" select="sum($testNode//@failures,sum($testNode//@errors,$testNode//@skipped))" />
 			<xsl:variable name="testsPassed" select="$testNode//@tests - $testsFailed" />
 			
-			<xsl:variable name="testSuite" select="document('/Users/mac/Reflex/reflex/tests/TESTS-TestSuites.xml')//testsuite[lower-case(@name)=lower-case(concat($apiName,'Test'))]" />
+			<xsl:variable name="testSuite" select="document(concat($config/tests/linkPath,'/',$config/tests/prefix,'TestSuites.xml'))//testsuite[lower-case(@name)=lower-case(concat($apiName,'Test'))]" />
 			
 			<span class="testSpan">
 				<xsl:choose>
 					<xsl:when test="$testNode">
 						This class has passed 
-						<a href="/Users/mac/Reflex/reflex/tests/{replace($testSuite/@package,'\.','/')}/{$testSuite/@id}_{$testSuite/@name}.html">
+						<a href="{$config/tests/link}/{replace($testSuite/@package,'\.','/')}/{$testSuite/@id}_{$testSuite/@name}.html">
 							<xsl:value-of select="$testsPassed" /> 
 								<xsl:if test="$testsPassed != $testNode//@tests">
 									out of <xsl:value-of select="$testNode//@tests" /> 
@@ -1220,7 +1223,8 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</span>					
-		</div>			
+		</div>
+</xsl:if>	
 <!-- end modification -->
 		
 	</div>
