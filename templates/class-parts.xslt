@@ -1201,7 +1201,7 @@
 			<xsl:variable name="testsFailed" select="sum($testNode//@failures,sum($testNode//@errors,$testNode//@skipped))" />
 			<xsl:variable name="testsPassed" select="$testNode//@tests - $testsFailed" />
 			
-			<xsl:variable name="testSuite" select="document(concat($config/tests/linkPath,'/',$config/tests/prefix,'TestSuites.xml'))//testsuite[lower-case(@name)=lower-case(concat($apiName,'Test'))]" />
+			<xsl:variable name="testSuite" select="document(concat($config/tests/linkPath,'/','TESTS-','TestSuites.xml'))//testsuite[lower-case(@name)=lower-case(concat($apiName,'Test'))]" />
 			
 			<span class="testSpan">
 				<xsl:choose>
