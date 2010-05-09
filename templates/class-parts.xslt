@@ -685,6 +685,7 @@
 <xsl:if test="$config/linkReport/show = 'true'">
 					<xsl:variable name="apiName" select="./apiName" />
 					<xsl:variable name="linkReportNode" select="document($config/linkReport/path)//scripts/script[def/@id=concat($packageName,':',$apiName)]" />
+					<xsl:variable name="compressionRatio" select="$config/linkReport/compression" />
 					
 					<xsl:variable name="nodes">
 						<xsl:apply-templates select="$linkReportNode">
@@ -698,7 +699,7 @@
 							<tr height="100%">
 								<td class="costArea">
 									<span class="costSize">
-										<xsl:value-of select="round((sum($nodes/script/@optimizedsize) div 1000) * 10) div 10" />
+										<xsl:value-of select="round((sum($nodes/script/@optimizedsize) * $compressionRatio div 1000) * 10) div 10" />
 										<!--<xsl:value-of select="sum($nodes/script/@optimizedsize)" />-->
 									</span>
 									<span class="costMeasure"></span>
@@ -1189,9 +1190,20 @@
 				<xsl:with-param name="labelClass" select="'classHeaderTableLabel'"/>
 			</xsl:call-template>
 			<xsl:text disable-output-escaping="yes">&lt;br/&gt;</xsl:text>
-		<hr/>
-		
+
 <!-- modified by Ben Stucki -->
+<xsl:if test="prolog/asCustoms/experimental">
+	<p><font color="red"><strong>Notice:</strong> </font>This class is marked as experimental. Features provided by this class may not be supported in future versions.</p>
+</xsl:if>
+<xsl:if test="prolog/asCustoms/alpha">
+	<p>This class is marked as alpha. Features provided by this class are scheduled for release, however its implementation may change considerably.</p>
+</xsl:if>
+<xsl:if test="prolog/asCustoms/beta">
+	<p>This class is marked as beta. After reasonable testing this implementation will be released as a supported feature.</p>
+</xsl:if>
+			
+		<hr/>
+
 <xsl:if test="$config/tests/show='true'">
 		<div class="testDiv">
 			<xsl:variable name="apiName" select="./apiName" />

@@ -54,6 +54,7 @@
   <linkReport>
   	<show>true</show>
   	<path>C:/Users/Ben/Reflex/Reflex/docs/link-report.xml</path>
+  	<compression>0.6</compression>
   </linkReport>
   
   <tests>
