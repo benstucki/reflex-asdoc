@@ -24,14 +24,74 @@
 		<shortDescription><![CDATA[A list of deprecated items and suggested alternatives when available.]]></shortDescription>
 		<description></description>
 	</deprecated>
-	<!--
+	
 	<packages>
-		<package name="">
-			<shortDescription></shortDescription>
-			<description></description>
+		<package name="reflex.behaviors">
+			<shortDescription>Behavior classes are used to control how a component responds to user input.</shortDescription>
+			<description>Reflex behaviors control how a component responds to user input. With behaviors you can customize existing functionality without breaking or rewriting the parts that already work.</description>
+			<propertiesDescription></propertiesDescription>
+			<functionsDescription></functionsDescription>
+		</package>
+		<package name="reflex.components">
+			<shortDescription>Component classes provide user interface controls such as Button, List, and ScrollBar.</shortDescription>
+			<description>Reflex components are incredibly customizable, light weight and easy to use. Even better, everyone gets to use them. With Reflex you can finally share components with both Flash and Flex users!</description>
+			<propertiesDescription></propertiesDescription>
+			<functionsDescription></functionsDescription>
+		</package>
+		<package name="reflex.cursors">
+			<shortDescription>Cursor management classes are still experimental.</shortDescription>
+			<description>Cursor management classes are still experimental.</description>
+			<propertiesDescription></propertiesDescription>
+			<functionsDescription></functionsDescription>
+		</package>
+		<package name="reflex.display">
+			<shortDescription>Display classes are used to implement core display list logic.</shortDescription>
+			<description>Display classes implement our core display list logic.</description>
+			<propertiesDescription></propertiesDescription>
+			<functionsDescription>Global function are provided for common display related tasks.</functionsDescription>
+		</package>
+		<package name="reflex.events">
+			<shortDescription>Custom event classes are provided for common use cases.</shortDescription>
+			<description>Custom event classes are provided for common use cases.</description>
+			<propertiesDescription></propertiesDescription>
+			<functionsDescription></functionsDescription>
+		</package>
+		<package name="reflex.graphics">
+			<shortDescription>Graphics classes are used to persist rendering instructions based on FXG.</shortDescription>
+			<description>Graphics classes are used to persist rendering instructions based on FXG. All classes in this branch are experimental.</description>
+			<propertiesDescription></propertiesDescription>
+			<functionsDescription></functionsDescription>
+		</package>
+		<package name="reflex.layout">
+			<shortDescription>Most classes in the reflex.layout package have been deprectated. Please use the reflex.layouts package instead.</shortDescription>
+			<description>Most classes in the reflex.layout package have been deprectated. Please use the reflex.layouts package instead.</description>
+			<propertiesDescription></propertiesDescription>
+			<functionsDescription></functionsDescription>
+		</package>
+		<package name="reflex.layouts">
+			<shortDescription>Layout classes are used to control the positioning and measurement of a group of objects.</shortDescription>
+			<description>Reflex layouts are versatile and light-weight. They provide advanced measurement and invalidation when you need it and stay out of your way when you don’t.</description>
+			<propertiesDescription></propertiesDescription>
+			<functionsDescription></functionsDescription>
+		</package>
+		<package name="reflex.measurement">
+			<shortDescription>Measurement classes are used to provide content aware resizing information.</shortDescription>
+			<description>Measurement classes are used to provide content aware resizing.</description>
+			<propertiesDescription></propertiesDescription>
+			<functionsDescription></functionsDescription>
+		</package>
+		<package name="reflex.metadata">
+			<shortDescription>Metadata utilities are experimental and may be replaced by compiler alternatives soon.</shortDescription>
+			<description>Metadata utilities are experimental and may be replaced by compiler alternatives soon.</description>
+			<propertiesDescription></propertiesDescription>
+			<functionsDescription></functionsDescription>
+		</package>
+		<package name="reflex.skins">
+			<shortDescription>Skins are used to control a component's visual appearance.</shortDescription>
+			<description>Reflex skins allow you to control every aspect of a component’s visual appearance. From custom classes to animated MovieClips – or event just PNGs, we’ve got a solution to fit your workflow.</description>
 			<propertiesDescription></propertiesDescription>
 			<functionsDescription></functionsDescription>
 		</package>
 	</packages>
-	-->
+	
 </overviews>
