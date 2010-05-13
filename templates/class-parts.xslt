@@ -1192,15 +1192,20 @@
 			<xsl:text disable-output-escaping="yes">&lt;br/&gt;</xsl:text>
 
 <!-- modified by Ben Stucki -->
-<xsl:if test="prolog/asCustoms/experimental">
-	<p><font color="red"><strong>Notice:</strong> </font>This class is marked as experimental. Features provided by this class may not be supported in future versions.</p>
-</xsl:if>
-<xsl:if test="prolog/asCustoms/alpha">
-	<p>This class is marked as alpha. Features provided by this class are scheduled for release, however its implementation may change considerably.</p>
-</xsl:if>
-<xsl:if test="prolog/asCustoms/beta">
-	<p>This class is marked as beta. After reasonable testing this implementation will be released as a supported feature.</p>
-</xsl:if>
+<xsl:choose>
+	<xsl:when test="prolog/asCustoms/experimental">
+		<strong><font color="red">Notice: </font></strong>This class is marked as experimental. Features provided by this class may not be supported in future versions.
+	</xsl:when>
+	<xsl:when test="prolog/asCustoms/alpha">
+		This class is marked as alpha. Features provided by this class are scheduled for release, however its implementation may change considerably.
+	</xsl:when>
+	<xsl:when test="prolog/asCustoms/beta">
+		This class is marked as beta. After reasonable testing this implementation will be released as a supported feature.
+	</xsl:when>
+	<xsl:otherwise>
+		<strong><font color="red">Notice: </font></strong>This class is marked as experimental. Features provided by this class may not be supported in future versions.
+	</xsl:otherwise>
+</xsl:choose>
 			
 		<hr/>
 
