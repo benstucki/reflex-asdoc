@@ -234,6 +234,9 @@
 													</xsl:otherwise>
 												</xsl:choose>
 											</div>
+											<div>
+												Note that most functionality provided by package level functions will be moved into replaceable utilities in the future. However, we don't want to support this use case until after a stable framework release is reached.
+											</div>
 											<table cellpadding="3" cellspacing="0" class="summaryTable">
 												<tr>
 													<th>
