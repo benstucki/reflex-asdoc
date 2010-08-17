@@ -54,7 +54,7 @@
 			<shortDescription>Display classes are used to implement core display list logic.</shortDescription>
 			<description>Display classes implement our core display list logic. This package my also include display components which are not skinnable and have no interactive behavior.</description>
 			<propertiesDescription></propertiesDescription>
-			<functionsDescription>Global functions are provided for common display related tasks.</functionsDescription>
+			<functionsDescription>Package level functions are provided for common display related tasks. Note that most functionality provided by package level functions will be moved into replaceable utilities in the future. However, we don't want to support this use case until after a stable framework release is reached.</functionsDescription>
 		</package>
 		<package name="reflex.events">
 			<shortDescription>Custom event classes are provided for common use cases.</shortDescription>
@@ -84,13 +84,13 @@
 			<shortDescription>Measurement classes are used to provide content aware resizing information.</shortDescription>
 			<description>Measurement classes are used to provide content aware resizing.</description>
 			<propertiesDescription></propertiesDescription>
-			<functionsDescription>Global functions are provided for common measurement related tasks.</functionsDescription>
+			<functionsDescription>Package level functions are provided for common measurement related tasks. Note that most functionality provided by package level functions will be moved into replaceable utilities in the future. However, we don't want to support this use case until after a stable framework release is reached.</functionsDescription>
 		</package>
 		<package name="reflex.metadata">
 			<shortDescription>Metadata utilities are experimental and may be replaced by compiler alternatives soon.</shortDescription>
 			<description>Metadata utilities are experimental and may be replaced by compiler alternatives soon.</description>
 			<propertiesDescription></propertiesDescription>
-			<functionsDescription>Global functions are provided for common metadata related tasks.</functionsDescription>
+			<functionsDescription>Package level functions are provided for common metadata related tasks. Note that most functionality provided by package level functions will be moved into replaceable utilities in the future. However, we don't want to support this use case until after a stable framework release is reached.</functionsDescription>
 		</package>
 		<package name="reflex.skins">
 			<shortDescription>Skins are used to control a component's visual appearance.</shortDescription>
@@ -102,7 +102,7 @@
 			<shortDescription>Style classes are used to work with dynamic data which has appended to component instances at runtime.</shortDescription>
 			<description>Style classes are used to work with dynamic data which has appended to component instances at runtime. This is often used to affect visual properties such as border color or layout settings, but may also include other use cases (such as behavior settings).</description>
 			<propertiesDescription></propertiesDescription>
-			<functionsDescription>Global functions are provided for common style related tasks.</functionsDescription>
+			<functionsDescription>Package level functions are provided for common style related tasks. Note that most functionality provided by package level functions will be moved into replaceable utilities in the future. However, we don't want to support this use case until after a stable framework release is reached.</functionsDescription>
 		</package>
 	</packages>
 	
